@@ -1,0 +1,49 @@
+.main {
+    position: relative;
+}
+
+.block {
+    display: block;
+}
+
+#weatherForm {
+    font-size: 16px;
+    margin: 30px auto;
+    padding: 10px;
+    width: 50%;
+    input[type=text] {
+        border: 1px solid rgb(190, 147, 230);
+        margin-top: 10px;
+        padding: 10px 5px;
+        width: 100%;
+    }
+    input[type=submit] {
+        background-color: rgb(190, 147, 230);
+        color: #fff;
+        margin-top: 15px;
+
+    }
+    label {
+        display: block;
+    }
+    .filters {
+        display: flex;
+    }
+}
+
+.weatherForecast {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    section {
+        border: 1px solid rgb(190, 147, 230);
+        padding: 10px;
+        margin: 5px;
+        background-color:lavender;
+        flex-grow: 1;
+    }
+
+    .description {
+        text-transform: capitalize;
+    }
+}
