@@ -1,7 +1,3 @@
-.main {
-    position: relative;
-}
-
 .block {
     display: block;
 }
@@ -31,7 +27,7 @@
     }
 }
 
-.weatherForecast {
+.searchResults {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
