@@ -4,6 +4,14 @@ export default function SearchHeader(props) {
     const [cityName, setCityName] = useState('San Francisco');
     const [degreeType, setDegreeType] = useState('imperial');
 
+    const handleSubmit = (e) => {
+        e?.preventDefault();
+
+        if (cityName) {
+            props.onSubmit(cityName, degreeType);
+        }
+    };
+    
     useEffect(() => {
         // Fetch new data when the degree type changes, i.e. from celcius to fahrenheit
         handleSubmit();
@@ -14,13 +22,6 @@ export default function SearchHeader(props) {
         document.title = `Weather Forecast for ${cityName}`;
     }, [cityName]);
     
-    const handleSubmit = (e) => {
-        e?.preventDefault();
-
-        if (cityName) {
-            props.onSubmit(cityName, degreeType);
-        }
-    };
 
     const handleDegreeChange = (e) => {
         setDegreeType(e.target.value);
@@ -34,6 +35,7 @@ export default function SearchHeader(props) {
                 value={cityName}
                 onChange={(e) => setCityName(e.target.value)}
                 id='cityName'
+                placeholder='Enter City Name'
             />
             <div className='formError'>{props.error}</div>
             <div className="filters">
