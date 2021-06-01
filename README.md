@@ -1,5 +1,5 @@
 
-This app displays a 7-day weather forecast for any city you serch for.
+This app displays a 7-day weather forecast for any city you search for.
 
 
 To get started,
