@@ -1,6 +1,7 @@
 import React  from 'react';
 
 export default function SearchMap(props) {
+    // Renders a map of the queried City
     function getMap() {
         const {data} = props;
 
