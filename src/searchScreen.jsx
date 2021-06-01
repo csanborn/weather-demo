@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchForm from './searchForm';
 import SearchResults from './searchResults';
 import SearchMap from './searchMap';
@@ -9,6 +9,13 @@ export default function SearchScreen() {
 
     const host = 'http://localhost:8080';
 
+    useEffect(() => {
+        // Show error message if server hasn't started
+        fetch(`${host}/ping`)
+        .then((res) => console.log("Server is running."))
+        .catch((e) => setError("Server isn't running", e))
+    }, []);
+    
     const handleSubmit = async (cityName, degreeType) => {
         clearError();
 
